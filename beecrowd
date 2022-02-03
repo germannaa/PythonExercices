@@ -1,0 +1,5 @@
+a=int(input("Digite o primeiro valor:\n"))
+b=int(input("Digite o segundo valor:\n"))
+
+x=a+b
+print(f'X = {x}')
