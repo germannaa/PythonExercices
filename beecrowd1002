@@ -1,0 +1,7 @@
+a=int(input("Digite valor do raio do circulo:\n"))
+
+n=3.14159
+raio = a**2
+area=n*raio
+
+print(f'A={area}')
