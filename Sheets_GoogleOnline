@@ -1,0 +1,52 @@
+import gspread
+
+#https://buildmedia.readthedocs.org/media/pdf/gspread/latest/gspread.pdf
+gc = gspread.service_account(filename='algoritmos2-345723-f55de16aa6fb.json')
+sheets = \
+    {'VENDAS':'https://docs.google.com/spreadsheets/d/1U1XDkHXGwVWOR78kJbSO82je6w4ooM94VSMuJiGymVc/edit?usp=sharing'}
+'''Dicionario que contem a chave e o valor (link da planilha de vendas)'''
+
+
+'''Função que vc vai acessar a tabela
+Laco dentro da planilha
+sheet = worksheet (aba que vai acessar, tem que renomear dependendo do que va acessar, ou busca com o codigo)
+dado = pagina que vai acessar
+celula = coloca qual celula vai querer acessar
+'''
+def carregarTabelasBase():
+    '''for planilha in sheets.values():
+        sh = gc.open_by_url(planilha)
+    dado = sh.worksheet('Página1')
+    celula = dado.acell('F5').value
+    print("Lendo a Planilha: ", celula)'''
+
+
+for planilha in sheets.values():
+    sh = gc.open_by_url(planilha)
+    dado = sh.worksheet('Página1')
+comissao = 0
+Busca = input('Digite o vendedor:  ')
+valorcomissao = 0
+total = 0
+
+for x in range(5, 23):
+    celula = dado.acell(f'F{x}').value
+
+    if celula == Busca:
+        comissao = dado.acell(f'H{x}').value
+        comissao2 = dado.acell(f'H{x}').value.replace("R$ ","").replace(",",".")
+        
+        valorcomissao = float(comissao2)
+        print(f'Valor da comissao {comissao}')
+        total = total + valorcomissao
+print(f'Valor total da comissao é de R${total}.')
+
+
+
+
+
+
+
+
+
+carregarTabelasBase()
