@@ -1,47 +1,47 @@
 #QuickSort
+# https://panda.ime.usp.br/panda/static/pythonds_pt/05-OrdenacaoBusca/OQuickSort.html
 
-def quickSort(alist):
-   quickSortHelper(alist,0,len(alist)-1)
+def quickSort(lista1):
+   quickSortAux(lista1,0,len(lista1)-1)
 
-def quickSortHelper(alist,first,last):
-   if first<last:
+def quickSortAux(lista1,primeiro,last):
+   if primeiro<last:
 
-       splitpoint = partition(alist,first,last)
+       splitpoint = partition(lista1,primeiro,last)
 
-       quickSortHelper(alist,first,splitpoint-1)
-       quickSortHelper(alist,splitpoint+1,last)
+       quickSortAux(lista1,primeiro,splitpoint-1)
+       quickSortAux(lista1,splitpoint+1,last)
 
 
-def partition(alist,first,last):
-   pivotvalue = alist[first]
+def partition(lista1,primeiro,last):
+   pivotvalue = lista1[primeiro]
 
-   leftmark = first+1
+   leftmark = primeiro+1
    rightmark = last
 
    done = False
    while not done:
 
-       while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
+       while leftmark <= rightmark and lista1[leftmark] <= pivotvalue:
            leftmark = leftmark + 1
 
-       while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
+       while lista1[rightmark] >= pivotvalue and rightmark >= leftmark:
            rightmark = rightmark -1
 
        if rightmark < leftmark:
            done = True
        else:
-           temp = alist[leftmark]
-           alist[leftmark] = alist[rightmark]
-           alist[rightmark] = temp
+           temp = lista1[leftmark]
+           lista1[leftmark] = lista1[rightmark]
+           lista1[rightmark] = temp
 
-   temp = alist[first]
-   alist[first] = alist[rightmark]
-   alist[rightmark] = temp
+   temp = lista1[primeiro]
+   lista1[primeiro] = lista1[rightmark]
+   lista1[rightmark] = temp
 
 
    return rightmark
 
-alist = [54,26,93,17,77,31,44,55,20]
-#Pode alterar a lista, ou colocar pro user incluir os valores na lista
-quickSort(alist)
-print(alist)
+lista1 = [54,26,93,17,77,31,44,55,20]
+quickSort(lista1)
+print(lista1)
