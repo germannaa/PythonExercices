@@ -34,3 +34,4 @@ for a in alunos:
             resultadoAlunosNao[a] = somanao
 print("SIM", resultadoAlunosSim)
 print("NÃO", resultadoAlunosNao)
+
