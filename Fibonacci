@@ -1,0 +1,20 @@
+def listSum(numList):
+    if len(numList) == 1:
+        return numList[0]
+    else:
+        return numList[0] + listSum(numList[1:])
+
+print(listSum([1,10,20,38,41,52,60]))
+
+print("*-*-*-" *20)
+
+
+def rec_fib(n):
+    if n>1:
+        return rec_fib(n-1) + rec_fib(n-2)
+    #else return n
+    return n
+
+#For para passar pela função n vezes, para ir correndo no fibonacci
+for i in range (0,10):
+    print(rec_fib(i))
