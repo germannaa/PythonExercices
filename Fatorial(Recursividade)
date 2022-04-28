@@ -1,0 +1,13 @@
+def fatorial(fat):
+    if fat == 1:
+        return 1
+    else:
+        #print(fat)
+        return fat * fatorial(fat-1)
+
+
+fat = int(input("Digite o numero positivo para saber o fatorial: "))
+
+print(f' {fat}! = {fatorial(fat)}')
+
+
