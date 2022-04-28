@@ -1,8 +1,12 @@
 fat = int(input("Digite o numero para saber o fatorial: "))
 totalfatorial=1
 
-for i in range (1,fat+1):
-    totalfatorial = i * totalfatorial
-    #print(i)
+if fat<0:
+    print("Valor nao permitido!")
+
+else:
+    for i in range (1,fat+1):
+        totalfatorial = i * totalfatorial
+        #print(i)
 
 print(f'{fat}! = {totalfatorial}')
