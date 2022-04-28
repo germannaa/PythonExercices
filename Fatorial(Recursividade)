@@ -1,5 +1,7 @@
 def fatorial(fat):
-    if fat <= 1:
+    if fat<0:
+        return ("ERROR!")
+    elif fat == 1 or fat ==0:
         return 1
     else:
         #print(fat)
@@ -9,5 +11,4 @@ def fatorial(fat):
 fat = int(input("Digite o numero positivo para saber o fatorial: "))
 
 print(f' {fat}! = {fatorial(fat)}')
-
 
