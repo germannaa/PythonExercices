@@ -1,5 +1,5 @@
 def fatorial(fat):
-    if fat == 1:
+    if fat <= 1:
         return 1
     else:
         #print(fat)
