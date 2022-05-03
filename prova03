@@ -1,0 +1,9 @@
+
+num1 = int(input("Digite o primeiro numero:"))
+num2 = int(input("Digite o segundo numero"))
+tupla=(num1,num2)
+
+if num1 / 2 and num2 / 2 == 0:
+    soma=num1+num2
+    print(soma)
+print(tupla)
