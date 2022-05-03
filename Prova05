@@ -1,13 +1,15 @@
 
+
 lista=[]
 maior = 0
-menor =999999999
-soma=0
+menor =999999999999999999
+'''soma=0'''
+somalista=0
 
 for i in range(0,12):
         num= int(input(f'Digite o valor do item  {i+1} da lista: '))
         lista.append(num)
-        soma = soma+num
+        '''soma = soma+num'''
 
         while lista[i]>maior:
             maior = lista[i]
@@ -15,13 +17,20 @@ for i in range(0,12):
             menor = lista[i]
 
 
+lista.remove(maior)
+lista.remove(menor)
 
-print(soma)
-soma = soma - menor - maior
+for num in lista:
+    somalista = somalista + num
+
+print(f'\nMaior numero = {maior} ... retirado da lista.')
+print(f'Menor numero = {menor} ... retirado da lista.')
+print(f'Lista atualizada: {lista}\n')
+print(f'Soma da lista atualizada= {somalista}\n')
 
 
-print(maior)
-print(menor)
-print(lista)
-print(soma)
+'''print(soma)
+soma = soma - menor - maior'''
+
+
 
