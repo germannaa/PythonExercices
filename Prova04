@@ -1,8 +1,14 @@
 
-matrizfinal=[]
+matriz=[[0,0,0],[0,0,0],[0,0,0]]
+soma = 0
 
-for i in range(0,3):
-    for j in range (0,3):
-        numero = input(f'Digite o valor da linha {i+1} e da coluna {j+1}: ')
-        matrizfinal.append(numero)
-print(matrizfinal)
+for linha in range(0,3):
+    for coluna in range (0,3):
+        matriz[linha][coluna] = int(input(f'Digite o valor da linha {linha} e da coluna {coluna}: '))
+        if coluna == 2:
+            soma = matriz[linha][2] + soma
+            print(matriz[linha][2])
+
+
+
+print(f' A soma dos numeros da coluna 2  = {soma}')
