@@ -7,3 +7,4 @@ for i in range(0,5):
         pares.append(numero)
 
 print(f'O numero {pares} são pares')
+
