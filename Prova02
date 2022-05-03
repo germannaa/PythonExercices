@@ -1,20 +1,9 @@
-
 primo = int(input("Digite um numero para saber se ele eh primo:"))
 
 
-if primo/2==0:
-    print("Numero nao é primo!")
-    print(primo)
-
-elif primo/3==0:
-    print("Numero nao é primo!")
-    print(primo)
-
-elif primo/5==0:
-    print("Numero nao é primo!")
-    print(primo)
+if primo%2==0 or primo%3==0 or primo%5==0:
+    print(f' Numero {primo} nao é primo!')
 
 else:
-    print("Numero  é primo!")
-
+    print(f'Numero {primo} é primo!')
 
