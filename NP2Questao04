@@ -1,0 +1,12 @@
+#Questao 04
+tabuada = int(input("Digite um valor para saber a tabuada (Entre 1 e 10):\n"))
+numinicio = int(input("Digite um valor para iniciar a tabuada (Entre 1 e 10)"))
+numfinal = int(input("Digite um valor para finalizar a tabuada (Entre 1 e 10)"))
+
+if numinicio>numfinal:
+    print("Digite o numero final maior que o inicial")
+
+for x in range (numinicio,numfinal+1):
+         print(f'{tabuada} * {x} = {tabuada*x}')
+
+
