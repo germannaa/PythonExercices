@@ -1,0 +1,41 @@
+
+soma = 0
+
+for i in range (-4,6):
+    x = i
+    #print(x)
+
+    if x%2!=0:
+        #print(x)
+
+        soma +=x
+print(soma)
+
+print('_+_+_+' * 10)
+
+soma = 0
+
+for i in range (12,15):
+    x = i
+    #print(x)
+
+    if x%2!=0:
+        #print(x)
+
+        soma +=x
+print(soma)
+
+print('_+_+_+' * 10)
+
+soma = 0
+
+for i in range (12,12):
+    x = i
+    #print(x)
+
+    if x%2!=0:
+        #print(x)
+
+        soma +=x
+print(soma)
+
