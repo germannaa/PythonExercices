@@ -39,3 +39,8 @@ for i in range (12,12):
         soma +=x
 print(soma)
 
+
+
+
+
+
