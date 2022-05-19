@@ -1,0 +1,26 @@
+-- Table: public.alunos
+
+-- DROP TABLE public.alunos;
+
+CREATE TABLE public.alunos
+(
+    id integer NOT NULL,
+    nome character varying(100)[] COLLATE pg_catalog."default" NOT NULL,
+    matricula integer NOT NULL,
+    idade integer NOT NULL,
+    endereco character varying(150)[] COLLATE pg_catalog."default",
+    CONSTRAINT alunos_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.alunos
+    OWNER to postgres;
+    
+    
+    
+    
+    
+    
+    >>>QueryTool
+    play
