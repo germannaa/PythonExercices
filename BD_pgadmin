@@ -17,10 +17,71 @@ TABLESPACE pg_default;
 ALTER TABLE public.alunos
     OWNER to postgres;
     
+    __________________________________________________________________________________________
+    - Table: public.alunos
+
+-- DROP TABLE public.alunos;
+
+CREATE TABLE public.alunos
+(
+    id integer NOT NULL,
+    matricula integer NOT NULL,
+    nome character varying(100)[] COLLATE pg_catalog."default" NOT NULL,
+    idade integer NOT NULL,
+    endereco character varying[] COLLATE pg_catalog."default",
+    CONSTRAINT alunos_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.alunos
+    OWNER to postgres;
+    
+    __________________________________________________________________________
+    
+    -- Table: public.disciplinas
+
+-- DROP TABLE public.disciplinas;
+
+CREATE TABLE public.disciplinas
+(
+    id integer NOT NULL,
+    nome character varying(100)[] COLLATE pg_catalog."default" NOT NULL,
+    horario integer,
+    carga_horaria integer NOT NULL,
+    sala character varying(50)[] COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT disciplinas_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.disciplinas
+    OWNER to postgres;
+    
+    ________________________________________________________________________________
+    
+    -- Table: public.professores
+
+-- DROP TABLE public.professores;
+
+CREATE TABLE public.professores
+(
+    id integer NOT NULL,
+    nome character varying(100)[] COLLATE pg_catalog."default" NOT NULL,
+    matricula integer NOT NULL,
+    CONSTRAINT professores_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.professores
+    OWNER to postgres;
     
     
+    ____________________________________________________________
     
     
+    PgAdmin
     
     >>>QueryTool
     play
