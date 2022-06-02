@@ -67,3 +67,4 @@ inIdade.grid(row=4, column=1)
 inMatricula.grid(row=5, column=1)
 cadastro_frame.place(y=100)
 janela.mainloop()
+
