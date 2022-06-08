@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>
+           Cadastro de Alunos
+        </title>
+        <style>
+            body {
+                background-color: #4158D0;
+                color: white;
+            }
+
+            #myForm {
+                display: inline-block;
+                margin: 10%;
+                padding: 10px;
+                }
+                            
+        
+    
+
+        </style>
+    </head>
+
+    <body>
+        <h2> Cadastro de Alunos </h2>
+        
+        <h3><b> Entre com os dados do aluno: </b></h3>
+        <div id = myForm >  
+            <form action="/*CRIAR HTML PARA ENCAMINHAR A PAGINA APOS ENVIAR DADOS*/" id = "Formulario" method="post" autocomplete="on">
+                
+            <legend>
+                <p><b>Dados Pessoais</b></p>
+            </legend>
+            <fieldset id="Pessoais">
+                <label for="nomeAluno"> Name:</label>
+                <input type="text" id = "nomeAluno" placeholder = "Nome Aluno:"> 
+                <br/>
+                <label for ="matricula "> Matricula: </label>
+                <input type ="long" id= "matricula" placeholder="Matricula do Aluno"> 
+                <br/>
+                <label for ="idade "> Idade: </label>
+                <input type ="long" id= "idade" placeholder="Idade do Aluno"> 
+                <hr><br/>
+            </fieldset>
+            <br/>
+            <input type="submit">
+            <button type="button" onclick="alert('Botao Clicado!')"> Aperte aqui! </button>
+            </form>
+        </div>
+    </body>
+</html>
