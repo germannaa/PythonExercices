@@ -23,6 +23,10 @@ def cadastrodealunos():
 
     return "Cadastro de alunos! <h1> Tela reservada para construção da pagina de  cadastro de alunos </h1>"
 
+'''
+return "render_template('FormsPy.html')"
+'''
+
 @app.route("/<name>")
 def user(name):
     return f'Hello {name}!'
