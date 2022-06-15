@@ -11,6 +11,9 @@ def home():
 @app.route("/cadastrodealuno", methods=["POST", "GET"])
 def cadastrodealuno():
     if request.method == "POST":
+        conectar = psycopg2.connect(host="localhost",port="5432",database="postgres",user="postgres",password="123")
+        cur = conectar.cursor()
+        
         nomeAluno = request.form["nomeAluno"]
         idade = request.form["idade"]
         matricula = request.form["matricula"]
