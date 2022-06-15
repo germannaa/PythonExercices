@@ -1,5 +1,6 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for,request
 import psycopg2
+
 
 app = Flask(__name__)
 
@@ -15,9 +16,11 @@ def cadastrodealuno():
         conectar = psycopg2.connect(host="localhost",port="5432",database="postgres",user="postgres",password="123")
         cur = conectar.cursor()
         
-        nomeAluno = request.form["nomeAluno"]
+        user = request.form["nomeAluno"]
         idade = request.form["idade"]
         matricula = request.form["matricula"]
+
+        cur.execute(f"INSERT INTO alunos(nome,idade,matricula) VALUES('{user}','{idade}','{matricula}')")
         
         conectar.commit()
         cur.close()
