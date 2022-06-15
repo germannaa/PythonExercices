@@ -48,5 +48,6 @@ if __name__ == "__main__":
     app.run()
 
 
+    
 '''Fazer html de cadastro
 conectar psycopg'''
