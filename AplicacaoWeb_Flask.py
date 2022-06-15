@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, redirect, url_for, request
 
 app = Flask(__name__)
@@ -9,9 +8,19 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/cadastrodealunos")
-def cadastrodealunos():
-    return "Cadastro de alunos! <h1> Tela reservada para construção da pagina de  cadastro de alunos </h1>"
+@app.route("/cadastrodealuno", methods=["POST", "GET"])
+def cadastrodealuno():
+    if request.method == "POST":
+        nomeAluno = request.form["nomeAluno"]
+        idade = request.form["idade"]
+        matricula = request.form["matricula"]
+
+        return redirect(url_for('name3', usr=user))
+        #return redirect(url_for('name2', name=user))
+    else:
+        return render_template("cadastrodealuno.html")
+'''    render_template("cadastrodealuno.html")
+'''    '''return "Cadastro de alunos! <h1> Tela reservada para construção da pagina de  cadastro de alunos </h1>"'''
 
 '''
 @app.route("/<name>")
@@ -45,7 +54,9 @@ def name3(usr):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)
+
+
 
 
     
