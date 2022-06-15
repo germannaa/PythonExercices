@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request
+import psycopg2
 
 app = Flask(__name__)
 
@@ -17,6 +18,10 @@ def cadastrodealuno():
         nomeAluno = request.form["nomeAluno"]
         idade = request.form["idade"]
         matricula = request.form["matricula"]
+        
+        conectar.commit()
+        cur.close()
+        conectar.close()
 
         return redirect(url_for('name3', usr=user))
         #return redirect(url_for('name2', name=user))
